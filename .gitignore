@@ -1,0 +1,9 @@
+logs
+tmp
+.history
+/.idea
+/*.iml
+/.idea_modules
+/.classpath
+/.project
+/.settings
