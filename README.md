@@ -7,6 +7,7 @@ dadsad
 ## Installation ##
 
 There are 2 options:
+
 1. Download `lib/index.js` file
 2. use npm `TODO`
 
