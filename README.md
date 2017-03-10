@@ -3,7 +3,7 @@
 An array sorted using binary search algorithm. Binary search is used when calling `indexOf` or `insert` (to find position in the array where the item should be inserted).
 
 [![Build Status](https://travis-ci.org/mcliwanow/binary-sorted-array.svg?branch=master)](https://travis-ci.org/mcliwanow/binary-sorted-array)
-dadsad
+
 ## Installation ##
 
 There are 2 options:
@@ -49,3 +49,39 @@ array.clear()
 ```
 
 ### Documentation ###
+
+#### new BinarySortedArray(arr: Array, compare: function)  ####
+
+Constructor takes 2 parameters and if given array is not empty sorts the array during initialization.
+
+| Parameter | Description | Default value |
+|---|---|---|
+|**`arr`**|Array of items|`[]`|
+|**`compare`**|Function comparing array items. Check default value for example|
+```javacript
+(a, b) => {
+    if (a === b) return 0
+    return a < b ? -1 : 1
+}
+```
+|
+
+#### `.getArray()` ####
+
+Returns copy of sorted array
+
+#### `.insert(item)` ####
+
+Adds a new item to the array in the proper position
+
+#### `.indexOf(item, returnPossiblePlace)` ####
+
+Returns index of the item or -1 if it doesn't exist in the array. If `returnPossiblePlace` is set to `true` instead of -1 it returns a place in the array where the item could be placed (watch out - you don't know if the item is in the array in this case!)
+
+#### `.remove(item)` ####
+
+Removes first found `item` for which `compare` function (see **`constructor`**) returns 0
+
+#### `.clear()` ####
+
+Clears the array
