@@ -54,17 +54,34 @@ array.clear()
 
 Constructor takes 2 parameters and if given array is not empty sorts the array during initialization.
 
-| Parameter | Description | Default value |
-|---|---|---|
-|**`arr`**|Array of items|`[]`|
-|**`compare`**|Function comparing array items. Check default value for example|
-```javacript
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>**`arr`**</td>
+<td>Array of items</td>
+<td>`[]`</td>
+</tr>
+<tr>
+<td>**`compare`**</td>
+<td>Function comparing array items. Check default value for example</td>
+<td>
+<pre lang="javascript">
 (a, b) => {
     if (a === b) return 0
     return a < b ? -1 : 1
 }
-```
-|
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
 
 #### `.getArray()` ####
 
