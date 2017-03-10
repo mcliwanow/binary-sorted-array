@@ -6,6 +6,9 @@ An array sorted using binary search algorithm. Binary search is used when callin
 dadsad
 ## Installation ##
 
-TODO
+There are 2 options:
+1. Download `lib/index.js` file
+2. use npm `TODO`
 
 ## Usage ##
+
