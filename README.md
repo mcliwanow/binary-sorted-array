@@ -64,12 +64,12 @@ Constructor takes 2 parameters and if given array is not empty sorts the array d
 </thead>
 <tbody>
 <tr>
-<td>**`arr`**</td>
+<td><strong><pre>arr</pre></strong></td>
 <td>Array of items</td>
-<td>`[]`</td>
+<td><strong><pre>[]</pre></strong></td>
 </tr>
 <tr>
-<td>**`compare`**</td>
+<td><strong><pre>compare</pre></strong></td>
 <td>Function comparing array items. Check default value for example</td>
 <td>
 <pre lang="javascript">
