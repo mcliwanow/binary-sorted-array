@@ -16,7 +16,7 @@ There are 2 options:
 Basic usage example
 
 ```javascript
-import BinarySortedArray from './index'
+import BinarySortedArray from 'binary-sorted-array'
 let array = new BinarySortedArray([1, 5, 6, 3, 5, 1])
 array.insert(0.99)
 array.remove(3)
@@ -28,7 +28,7 @@ array.clear()
 Example with objects and custom compare function
 
 ```javascript
-import BinarySortedArray from './index'
+import BinarySortedArray from 'binary-sorted-array'
 let compare = (a, b) => {
     if (a.start === b.start) return 0
     return a.start < b.start ? -1 : 1
