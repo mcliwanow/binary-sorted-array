@@ -53,16 +53,27 @@ test('remove simple', () => {
     expect(sortedArray[4]).toBe(7)
 })
 
-test('search simple', () => {
+test('indexOf simple', () => {
     let originalArray = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
     let array = new SortedArray(originalArray)
-    expect(array.search(4)).toBe(-1)
-    expect(array.search(12)).toBe(-1)
-    expect(array.search(1.4)).toBe(-1)
+    let sortedArray = array.getArray()
+    expect(sortedArray.length).toBe(originalArray.length)
+
+    sortedArray = array.clear().getArray()
+    expect(sortedArray.length).toBe(0)
+})
+
+test('clear', () => {
+    let originalArray = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+    let array = new SortedArray(originalArray)
+    expect(array.indexOf(4)).toBe(-1)
+    expect(array.indexOf(12)).toBe(-1)
+    expect(array.indexOf(1.4)).toBe(-1)
     originalArray.forEach((num, idx) => {
-        expect(array.search(num)).toBe(idx)
+        expect(array.indexOf(num)).toBe(idx)
     })
 })
+
 
 test('initialize with objects', () => {
     let comparator = (a, b) => {
@@ -131,7 +142,6 @@ test('insert with objects', () => {
     expect(sortedArray[sortedArray.length - 1]).toBe(elementToInsert)
 })
 
-
 test('remove with objects', () => {
     let comparator = (a, b) => {
         if (a.start === b.start) return 0
@@ -165,7 +175,7 @@ test('remove with objects', () => {
     expect(sortedArray[4].id).toBe(6)
 })
 
-test('search with objects', () => {
+test('indexOf with objects', () => {
     let comparator = (a, b) => {
         if (a.start === b.start) return 0
         return a.start < b.start ? -1 : 1
@@ -182,10 +192,10 @@ test('search with objects', () => {
         { id: 9, start: 8.23, title: 'some item'},
     ]
     let array = new SortedArray(originalArray, comparator)
-    expect(array.search({ id: 1, start: 4, title: 'some item'})).toBe(-1)
-    expect(array.search({ id: 1, start: 12, title: 'some item'})).toBe(-1)
-    expect(array.search({ id: 1, start: 1.124, title: 'some item'})).toBe(-1)
+    expect(array.indexOf({ id: 1, start: 4, title: 'some item'})).toBe(-1)
+    expect(array.indexOf({ id: 1, start: 12, title: 'some item'})).toBe(-1)
+    expect(array.indexOf({ id: 1, start: 1.124, title: 'some item'})).toBe(-1)
     originalArray.forEach((num, idx) => {
-        expect(array.search(num)).toBe(idx)
+        expect(array.indexOf(num)).toBe(idx)
     })
 })
