@@ -1,4 +1,4 @@
-class SortedArray {
+class BinarySortedArray {
 
     constructor(arr, comparator) {
         arr = arr || []
@@ -65,5 +65,5 @@ class SortedArray {
     }
 }
 
-if (typeof module === "object") module.exports = SortedArray
-if (typeof define === "function" && define.amd) define(SortedArray)
+if (typeof module === "object") module.exports = BinarySortedArray
+if (typeof define === "function" && define.amd) define(BinarySortedArray)

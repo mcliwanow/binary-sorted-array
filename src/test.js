@@ -1,7 +1,7 @@
-import SortedArray from './index'
+import BinarySortedArray from './index'
 
 test('initialize simple', () => {
-    let array = new SortedArray([1, 5, 6, 3, 5, 1])
+    let array = new BinarySortedArray([1, 5, 6, 3, 5, 1])
     let sortedArray = array.getArray()
     let expectedArray = [1, 1, 3, 5, 5, 6]
 
@@ -12,7 +12,7 @@ test('initialize simple', () => {
 })
 
 test('insert simple', () => {
-    let array = new SortedArray([1, 2, 3, 5, 6, 7, 8, 9, 10, 11])
+    let array = new BinarySortedArray([1, 2, 3, 5, 6, 7, 8, 9, 10, 11])
     let elementToInsert = 4
     array.insert(elementToInsert)
     let sortedArray = array.getArray()
@@ -36,7 +36,7 @@ test('insert simple', () => {
 
 test('remove simple', () => {
     let originalArray = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
-    let array = new SortedArray(originalArray)
+    let array = new BinarySortedArray(originalArray)
     let elementToRemove = 4
     array.remove(elementToRemove)
     let sortedArray = array.getArray()
@@ -55,7 +55,7 @@ test('remove simple', () => {
 
 test('indexOf simple', () => {
     let originalArray = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
-    let array = new SortedArray(originalArray)
+    let array = new BinarySortedArray(originalArray)
     let sortedArray = array.getArray()
     expect(sortedArray.length).toBe(originalArray.length)
 
@@ -65,7 +65,7 @@ test('indexOf simple', () => {
 
 test('clear', () => {
     let originalArray = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
-    let array = new SortedArray(originalArray)
+    let array = new BinarySortedArray(originalArray)
     expect(array.indexOf(4)).toBe(-1)
     expect(array.indexOf(12)).toBe(-1)
     expect(array.indexOf(1.4)).toBe(-1)
@@ -80,7 +80,7 @@ test('initialize with objects', () => {
         if (a.start === b.start) return 0
         return a.start < b.start ? -1 : 1
     }
-    let array = new SortedArray([
+    let array = new BinarySortedArray([
         { id: 1, start: 1.123, title: 'some item'},
         { id: 2, start: 5, title: 'some item'},
         { id: 3, start: 6.89, title: 'some item'},
@@ -120,7 +120,7 @@ test('insert with objects', () => {
         { id: 8, start: 7, title: 'some item'},
         { id: 9, start: 8.23, title: 'some item'},
     ]
-    let array = new SortedArray(originalArray, comparator)
+    let array = new BinarySortedArray(originalArray, comparator)
     let elementToInsert = { id: 123, start: 4, title: 'new item' }
     array.insert(elementToInsert)
     let sortedArray = array.getArray()
@@ -158,7 +158,7 @@ test('remove with objects', () => {
         { id: 8, start: 7, title: 'some item'},
         { id: 9, start: 8.23, title: 'some item'},
     ]
-    let array = new SortedArray(originalArray, comparator)
+    let array = new BinarySortedArray(originalArray, comparator)
     let elementToRemove = { id: 123, start: 4, title: 'new item' }
     array.remove(elementToRemove)
     let sortedArray = array.getArray()
@@ -191,7 +191,7 @@ test('indexOf with objects', () => {
         { id: 8, start: 7, title: 'some item'},
         { id: 9, start: 8.23, title: 'some item'},
     ]
-    let array = new SortedArray(originalArray, comparator)
+    let array = new BinarySortedArray(originalArray, comparator)
     expect(array.indexOf({ id: 1, start: 4, title: 'some item'})).toBe(-1)
     expect(array.indexOf({ id: 1, start: 12, title: 'some item'})).toBe(-1)
     expect(array.indexOf({ id: 1, start: 1.124, title: 'some item'})).toBe(-1)
