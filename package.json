@@ -1,8 +1,17 @@
 {
   "name": "binary-sorted-array",
   "description": "Binary sorted array. Implements array initialization, insertion, finding index of element, item removal, clearing the array.",
-  "keywords": ["sorted", "binary", "array", "insert", "indexOf", "clear", "remove", "performance"],
-  "version": "1.0.0",
+  "keywords": [
+    "sorted",
+    "binary",
+    "array",
+    "insert",
+    "indexOf",
+    "clear",
+    "remove",
+    "performance"
+  ],
+  "version": "1.0.1",
   "main": "lib/index.js",
   "scripts": {
     "start": "babel src --out-dir lib --ignore test.js",
@@ -19,9 +28,9 @@
   },
   "dependencies": {},
   "license": "MIT",
-  "repository" : {
-      "type" : "git",
-      "url" : "https://github.com/mcliwanow/binary-sorted-array.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcliwanow/binary-sorted-array.git"
   },
   "bugs": "https://github.com/mcliwanow/binary-sorted-array/issues"
 }
