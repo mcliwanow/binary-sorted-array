@@ -63,6 +63,15 @@ test('indexOf simple', () => {
     expect(sortedArray.length).toBe(0)
 })
 
+test('slice', () => {
+    let array = new BinarySortedArray([2, 5, 7, 1, 3, 4, 6, 8, 9, 10])
+    let items = array.slice(1, 4)
+    expect(items.length).toBe(3)
+    expect(items[0]).toBe(2)
+    expect(items[1]).toBe(3)
+    expect(items[2]).toBe(4)
+})
+
 test('clear', () => {
     let originalArray = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
     let array = new BinarySortedArray(originalArray)
@@ -73,7 +82,6 @@ test('clear', () => {
         expect(array.indexOf(num)).toBe(idx)
     })
 })
-
 
 test('initialize with objects', () => {
     let comparator = (a, b) => {

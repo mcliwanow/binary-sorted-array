@@ -44,6 +44,7 @@ let array = new BinarySortedArray([
 array.insert({ start: 0.99 })
 array.remove({ id: 4, start: 3.99 })
 array.indexOf({ start: 5 })
+array.slice(2, 4)
 let sortedArray = array.getArray()
 array.clear()
 ```
@@ -94,6 +95,10 @@ Adds a new item to the array in the proper position
 #### `.indexOf(item, returnPossiblePlace)` ####
 
 Returns index of the item or -1 if it doesn't exist in the array. If `returnPossiblePlace` is set to `true` instead of -1 it returns a place in the array where the item could be placed (watch out - you don't know if the item is in the array in this case!)
+
+#### `.slice(start, end)` ####
+
+Performs `slice` operation on internal array and returns the result
 
 #### `.remove(item)` ####
 

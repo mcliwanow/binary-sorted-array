@@ -39,6 +39,8 @@ class BinarySortedArray {
         return this
     }
 
+    slice = (start, end) => this.array.slice(start, end)
+
     indexOf = (item, returnPossiblePlace) => {
         let minIdx = 0,
             maxIdx = this.array.length - 1,
