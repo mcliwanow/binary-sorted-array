@@ -68,4 +68,4 @@ class BinarySortedArray {
 }
 
 if (typeof module === "object") module.exports = BinarySortedArray
-if (typeof define === "function" && define.amd) define(BinarySortedArray)
+else if (typeof define === "function" && define.amd) define(BinarySortedArray)
